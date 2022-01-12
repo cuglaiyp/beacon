@@ -1,0 +1,25 @@
+# HTTP 连接的配置
+ok:
+    http:
+        connect-timeout: 30
+        keep-alive-duration: 300
+        max-idle-connections: 200
+        read-timeout: 30
+        write-timeout: 30
+
+# 腾讯云 sdk 相关的配置
+
+tencent:
+    sms:
+        account:
+            secret-id:
+            secret-key:
+            sign_name:
+            sms-sdk-app-id:
+            template-id:
+spring:
+    datasource:
+        url:
+        username:
+        password:
+        driver-class-name:

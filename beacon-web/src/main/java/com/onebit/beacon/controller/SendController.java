@@ -2,7 +2,7 @@ package com.onebit.beacon.controller;
 
 import com.onebit.beacon.handler.SmsHandler;
 import com.onebit.beacon.pojo.TaskInfo;
-import com.onebit.beacon.pojo.vo.BasicResultVO;
+import com.onebit.beacon.vo.BasicResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

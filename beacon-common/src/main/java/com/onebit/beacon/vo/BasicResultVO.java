@@ -1,4 +1,4 @@
-package com.onebit.beacon.pojo.vo;
+package com.onebit.beacon.vo;
 
 /**
  * @Author: Onebit
@@ -75,21 +75,23 @@ public final class BasicResultVO<T> {
         return new BasicResultVO<>(RespStatusEnum.SUCCESS, msg, data);
     }
 
+    // 成功和失败定义的一些默认方法不一样，是因为成功的状态只有一种，我们可以全部列出来；而失败的状态太多，只能让用户传
 
     /**
      * @return 默认失败的响应
      */
-    public static BasicResultVO<Void> fail() {
+    public static <T> BasicResultVO<T> fail() {
         return new BasicResultVO<>(RespStatusEnum.FAIL);
     }
 
     /**
-     * @param msg
-     * @return 自定义消息的失败响应
+     * @param status
+     * @return 自定义失败状态的响应
      */
-    public static <T> BasicResultVO<T> fail(String msg) {
-        return new BasicResultVO<>(RespStatusEnum.FAIL, msg, null);
+    public static <T> BasicResultVO<T> fail(RespStatusEnum status) {
+        return new BasicResultVO<>(status);
     }
+
 
 
 }

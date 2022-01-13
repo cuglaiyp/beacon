@@ -10,6 +10,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>beacon-service-api-impl</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.onebit</groupId>
+            <artifactId>beacon-service-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.onebit</groupId>
+            <artifactId>beacon-support</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

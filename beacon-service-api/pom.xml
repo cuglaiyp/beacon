@@ -11,5 +11,14 @@
 
     <artifactId>beacon-service-api</artifactId>
 
+    <dependencies>
+        <!--api 层也需要common的一些公共类-->
+        <dependency>
+            <groupId>com.onebit</groupId>
+            <artifactId>beacon-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

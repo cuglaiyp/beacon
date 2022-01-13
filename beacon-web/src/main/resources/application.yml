@@ -1,9 +1,0 @@
-# HTTP 连接的配置
-ok:
-    http:
-        connect-timeout: 30
-        keep-alive-duration: 300
-        max-idle-connections: 200
-        read-timeout: 30
-        write-timeout: 30
-

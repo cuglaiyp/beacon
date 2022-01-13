@@ -1,11 +1,13 @@
 package com.onebit.beacon.handler;
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.StrUtil;
+import com.onebit.beacon.dao.SmsRecordDao;
+import com.onebit.beacon.domain.SmsRecord;
+import com.onebit.beacon.dto.SmsContentModel;
 import com.onebit.beacon.pojo.SmsParam;
 import com.onebit.beacon.pojo.TaskInfo;
 import com.onebit.beacon.script.SmsScript;
-import com.onebit.beacon.dao.SmsRecordDao;
-import com.onebit.beacon.domain.SmsRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,11 +28,16 @@ public class SmsHandler implements Handler {
 
     @Override
     public boolean doHandler(TaskInfo taskInfo) {
+        SmsContentModel smsContentModel = (SmsContentModel) taskInfo.getContentModel();
+        String trueContent = smsContentModel.getContent();
+        if (!StrUtil.isBlank(smsContentModel.getUrl())) {
+            trueContent = trueContent + " " + smsContentModel.getUrl();
+        }
         // SmsHandler 会具体地将 TaskInfo 拆开，构造 SmsParam
         SmsParam smsParam = SmsParam.builder()
                 .phones(taskInfo.getReceiver())
-                .content(taskInfo.getContent())
                 .messageTemplateId(taskInfo.getMessageTemplateId())
+                .content(trueContent)
                 // 目前只用了腾讯云，先写死这个
                 .supplierId(10)
                 .supplierName("腾讯云通知类消息渠道")

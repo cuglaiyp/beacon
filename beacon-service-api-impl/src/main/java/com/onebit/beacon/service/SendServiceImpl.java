@@ -4,11 +4,13 @@ import com.onebit.beacon.domain.BatchSendRequest;
 import com.onebit.beacon.domain.SendRequest;
 import com.onebit.beacon.domain.SendResponse;
 import com.onebit.beacon.domain.SendTaskModel;
-import com.onebit.beacon.enums.RequestType;
 import com.onebit.beacon.pipeline.ProcessContext;
 import com.onebit.beacon.pipeline.ProcessController;
-import com.onebit.beacon.pojo.TaskInfo;
+import com.onebit.beacon.vo.BasicResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Arrays;
 
 /**
  * @Author: Onebit
@@ -18,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 服务的入口实现类。请求进来之后，肯定有很多流程需要走，所以我们把这些流程用责任链模式封装一下，放在 support 里面
  */
+@Service
 public class SendServiceImpl implements SendService {
 
     /**
@@ -36,16 +39,17 @@ public class SendServiceImpl implements SendService {
         // 1. 构建 ProcessModel
         // ProcessModel 是接口，我们需要自定自己的业务的是数据类型
         SendTaskModel sendTaskModel = SendTaskModel.builder()
-                .requestType(RequestType.SINGLE.getCode())
-                .messageParam(sendRequest.getMessageParam())
-                .taskInfo(TaskInfo.builder().messageTemplateId(sendRequest.getMessageTemplateId()).build())
+                .messageTemplateId(sendRequest.getMessageTemplateId())
+                .messageParamList(Arrays.asList(sendRequest.getMessageParam()))
                 .build();
         // 2. 构建 ProcessContext
         ProcessContext context = ProcessContext.builder()
                 .code(sendRequest.getCode())
                 .processModel(sendTaskModel)
+                .needBreak(false)
+                .response(BasicResultVO.success())
                 .build();
-        processController.process(context);
+        context = processController.process(context);
         return SendResponse.builder().code(context.getCode()).msg(context.getResponse().getMsg()).build();
     }
 
@@ -54,9 +58,8 @@ public class SendServiceImpl implements SendService {
         // 1. 构建 ProcessModel
         // ProcessModel 是接口，我们需要自定自己的业务的是数据类型
         SendTaskModel sendTaskModel = SendTaskModel.builder()
-                .requestType(RequestType.BATCH.getCode())
+                .messageTemplateId(batchSendRequest.getMessageTemplateId())
                 .messageParamList(batchSendRequest.getMessageParamList())
-                .taskInfo(TaskInfo.builder().messageTemplateId(batchSendRequest.getMessageTemplateId()).build())
                 .build();
         // 2. 构建 ProcessContext
         ProcessContext context = ProcessContext.builder()

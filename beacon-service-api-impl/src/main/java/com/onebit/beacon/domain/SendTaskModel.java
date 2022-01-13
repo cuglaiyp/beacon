@@ -19,25 +19,34 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class SendTaskModel implements ProcessModel {
+
     /**
      * 请求类型：
      *      10：single
      *      20：batch
      */
-    private int requestType;
+    // private int requestType;
+    // 并不需要这个，因为传进来的任务个数就可以区分了
+
 
     /**
-     * single 接口需要的数据
+     * single 接口需要请求参数
      */
-    private MessageParam messageParam;
+    // private MessageParam messageParam;
+    // 也不需要这个，同样根据个数判断即可
 
     /**
-     * batch 接口需要的数据
+     * single/batch 接口需要的请求参数
      */
     private List<MessageParam> messageParamList;
 
     /**
      * 真正被发送的消息
      */
-    private TaskInfo taskInfo;
+    private List<TaskInfo> taskInfoList;
+
+    /**
+     * 消息模板的 Id
+     */
+    private Long messageTemplateId;
 }

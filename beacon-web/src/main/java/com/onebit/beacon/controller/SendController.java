@@ -2,6 +2,7 @@ package com.onebit.beacon.controller;
 
 import com.onebit.beacon.handler.SmsHandler;
 import com.onebit.beacon.pojo.TaskInfo;
+import com.onebit.beacon.pojo.vo.BasicResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,6 +36,8 @@ public class SendController {
 
     // 因为需要将发送短信后的响应入库，所以我们需要在发送之后多做些操作
     // 那么就需要再来一个接口
+    // 我们先将请求参数拼装成 TaskInfo，再由这个接口拆包，拼装成 SmsParam，调用腾讯脚本发消息，
+    // 发完消息之后，由这个接口调用 dao，入库
     @Autowired
     private SmsHandler smsHandler;
 
@@ -44,12 +47,17 @@ public class SendController {
      * @return
      */
     @GetMapping("/sendSms")
-    public boolean sendSms(String phone,String content,Long messageTemplateId ) {
+    public BasicResultVO<Void> sendSms(String phone,String content,Long messageTemplateId ) {
+        TaskInfo taskInfo = TaskInfo.builder()
+                .receiver(new HashSet<>(Arrays.asList(phone)))
+                .content(content)
+                .messageTemplateId(messageTemplateId)
+                .build();
 
-        TaskInfo taskInfo = TaskInfo.builder().receiver(new HashSet<>(Arrays.asList(phone)))
-                .content(content).messageTemplateId(messageTemplateId).build();
-
-        return smsHandler.doHandler(taskInfo);
+        if (smsHandler.doHandler(taskInfo)) {
+            return BasicResultVO.success("发送消息成功");
+        }
+        return BasicResultVO.fail();
     }
 
 }

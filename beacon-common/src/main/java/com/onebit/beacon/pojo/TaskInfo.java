@@ -1,8 +1,10 @@
 package com.onebit.beacon.pojo;
 
 import com.onebit.beacon.dto.ContentModel;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
@@ -12,6 +14,8 @@ import java.util.Set;
  */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TaskInfo {
     /**
      * 消息模板Id

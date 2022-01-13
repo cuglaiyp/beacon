@@ -1,0 +1,1022 @@
+2022-01-13 20:49:09.285 [main] INFO  com.onebit.beacon.BeaconApplication - Starting BeaconApplication using Java 1.8.0_261 on DESKTOP-3LE026R with PID 14084 (E:\IDEA_WorkSpace\beacon\beacon-web\target\classes started by dell in E:\IDEA_WorkSpace\beacon)
+2022-01-13 20:49:09.288 [main] INFO  com.onebit.beacon.BeaconApplication - No active profile set, falling back to default profiles: default
+2022-01-13 20:49:10.374 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-13 20:49:10.440 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2022-01-13 20:49:11.247 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-13 20:49:11.255 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:49:11.256 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 20:49:11.256 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-13 20:49:11.481 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 20:49:11.481 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2131 ms
+2022-01-13 20:49:11.635 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-01-13 20:49:11.672 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-13 20:49:30.752 [main] INFO  com.onebit.beacon.BeaconApplication - Starting BeaconApplication using Java 1.8.0_261 on DESKTOP-3LE026R with PID 9536 (E:\IDEA_WorkSpace\beacon\beacon-web\target\classes started by dell in E:\IDEA_WorkSpace\beacon)
+2022-01-13 20:49:30.754 [main] INFO  com.onebit.beacon.BeaconApplication - No active profile set, falling back to default profiles: default
+2022-01-13 20:49:31.250 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-13 20:49:31.294 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2022-01-13 20:49:31.651 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-13 20:49:31.657 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:49:31.658 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 20:49:31.658 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-13 20:49:31.732 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 20:49:31.732 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 947 ms
+2022-01-13 20:49:31.958 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-01-13 20:49:32.120 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-01-13 20:49:32.238 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-13 20:49:32.311 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-13 20:49:32.514 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-13 20:49:32.649 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-13 20:49:33.427 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-13 20:49:33.452 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 20:49:35.083 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.80.102:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-beacon-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = beacon
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-13 20:49:35.267 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 20:49:35.267 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 20:49:35.267 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078175150
+2022-01-13 20:49:35.269 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Subscribed to topic(s): beacon
+2022-01-13 20:49:35.282 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:49:35.296 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-13 20:49:35.305 [main] INFO  com.onebit.beacon.BeaconApplication - Started BeaconApplication in 4.936 seconds (JVM running for 5.548)
+2022-01-13 20:49:35.652 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-beacon-1, groupId=beacon] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 20:49:35.653 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:49:35.655 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:49:35.681 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:49:35.703 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=1, memberId='consumer-beacon-1-79f6ca77-f74f-4172-890c-c700485e19cd', protocol='range'}
+2022-01-13 20:49:35.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 1: {consumer-beacon-1-79f6ca77-f74f-4172-890c-c700485e19cd=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 20:49:35.741 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=1, memberId='consumer-beacon-1-79f6ca77-f74f-4172-890c-c700485e19cd', protocol='range'}
+2022-01-13 20:49:35.742 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 20:49:35.749 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:49:35.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-0
+2022-01-13 20:49:35.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-1
+2022-01-13 20:49:35.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-2
+2022-01-13 20:49:35.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-3
+2022-01-13 20:49:35.775 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:49:35.775 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:49:35.775 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:49:35.776 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-3 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:49:35.776 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:49:35.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:35.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:35.918 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:35.918 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:36.459 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:36.460 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:36.460 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:36.460 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:36.990 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:36.990 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:36.990 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:36.990 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:37.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:37.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:37.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:37.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:38.048 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:38.048 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:38.048 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:38.048 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:38.566 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:38.566 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:38.566 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:38.566 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:39.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:39.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:39.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:39.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:49:39.629 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-0
+2022-01-13 20:49:39.629 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:49:39.629 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:49:39.629 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:50:31.953 [main] INFO  com.onebit.beacon.BeaconApplication - Starting BeaconApplication using Java 1.8.0_261 on DESKTOP-3LE026R with PID 13760 (E:\IDEA_WorkSpace\beacon\beacon-web\target\classes started by dell in E:\IDEA_WorkSpace\beacon)
+2022-01-13 20:50:31.957 [main] INFO  com.onebit.beacon.BeaconApplication - No active profile set, falling back to default profiles: default
+2022-01-13 20:50:32.573 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-13 20:50:32.619 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2022-01-13 20:50:32.981 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-13 20:50:32.988 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:50:32.988 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 20:50:32.988 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-13 20:50:33.069 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 20:50:33.069 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1076 ms
+2022-01-13 20:50:33.160 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-01-13 20:50:33.285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-01-13 20:50:33.365 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-13 20:50:33.402 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-13 20:50:33.504 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-13 20:50:33.591 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-13 20:50:34.014 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-13 20:50:34.022 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 20:50:34.852 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.80.102:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-beacon-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = beacon
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-13 20:50:34.903 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 20:50:34.903 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 20:50:34.903 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078234902
+2022-01-13 20:50:35.013 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Subscribed to topic(s): beacon
+2022-01-13 20:50:35.021 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:50:35.028 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-13 20:50:35.034 [main] INFO  com.onebit.beacon.BeaconApplication - Started BeaconApplication in 3.502 seconds (JVM running for 4.124)
+2022-01-13 20:50:35.276 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-beacon-1, groupId=beacon] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 20:50:35.277 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:50:35.279 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:50:35.289 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:50:35.292 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=3, memberId='consumer-beacon-1-a0939fc5-4f7b-43e3-9d6c-be02e6b7093a', protocol='range'}
+2022-01-13 20:50:35.294 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 3: {consumer-beacon-1-a0939fc5-4f7b-43e3-9d6c-be02e6b7093a=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 20:50:35.299 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=3, memberId='consumer-beacon-1-a0939fc5-4f7b-43e3-9d6c-be02e6b7093a', protocol='range'}
+2022-01-13 20:50:35.300 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 20:50:35.301 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:50:35.307 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-0
+2022-01-13 20:50:35.307 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-1
+2022-01-13 20:50:35.307 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-2
+2022-01-13 20:50:35.307 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-3
+2022-01-13 20:50:35.315 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:50:35.316 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:50:35.316 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:50:35.316 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-3 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:50:35.316 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:50:35.400 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 1 for partition beacon-0
+2022-01-13 20:50:35.400 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-1
+2022-01-13 20:50:35.400 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:50:35.400 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:50:36.470 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  com.onebit.beacon.Recvier - receiver message:[{"businessId":1000000120220113,"contentModel":{"content":"61520"},"deduplicationTime":1,"idType":10,"isNightShield":0,"messageTemplateId":1,"msgType":10,"receiver":["15623014301"],"sendAccount":66,"sendChannel":30,"templateType":10}]
+2022-01-13 20:50:36.473 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 1 for partition beacon-1
+2022-01-13 20:50:36.473 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:50:36.473 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:50:36.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:50:36.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:50:37.034 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:50:37.034 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:50:37.553 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:50:37.553 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:50:38.068 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:50:38.068 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:53:55.986 [main] INFO  com.onebit.beacon.BeaconApplication - Starting BeaconApplication using Java 1.8.0_261 on DESKTOP-3LE026R with PID 3176 (E:\IDEA_WorkSpace\beacon\beacon-web\target\classes started by dell in E:\IDEA_WorkSpace\beacon)
+2022-01-13 20:53:55.988 [main] INFO  com.onebit.beacon.BeaconApplication - No active profile set, falling back to default profiles: default
+2022-01-13 20:53:56.539 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-13 20:53:56.590 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2022-01-13 20:53:57.054 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-13 20:53:57.062 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:53:57.062 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 20:53:57.062 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-13 20:53:57.140 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 20:53:57.141 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1118 ms
+2022-01-13 20:53:57.253 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-01-13 20:53:57.440 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-01-13 20:53:57.477 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-13 20:53:57.525 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-13 20:53:57.669 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-13 20:53:57.826 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-13 20:53:58.572 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-13 20:53:58.587 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 20:53:59.868 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.80.102:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-beacon-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = beacon
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-13 20:54:00.079 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 20:54:00.079 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 20:54:00.079 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078440077
+2022-01-13 20:54:00.082 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Subscribed to topic(s): beacon
+2022-01-13 20:54:00.096 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:54:00.108 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-13 20:54:00.120 [main] INFO  com.onebit.beacon.BeaconApplication - Started BeaconApplication in 4.561 seconds (JVM running for 5.77)
+2022-01-13 20:54:00.487 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-beacon-1, groupId=beacon] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 20:54:00.489 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:54:00.492 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:54:00.509 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:54:00.514 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=5, memberId='consumer-beacon-1-a3785466-092f-44ed-9219-0174371fe1bf', protocol='range'}
+2022-01-13 20:54:00.517 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 5: {consumer-beacon-1-a3785466-092f-44ed-9219-0174371fe1bf=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 20:54:00.527 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=5, memberId='consumer-beacon-1-a3785466-092f-44ed-9219-0174371fe1bf', protocol='range'}
+2022-01-13 20:54:00.527 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 20:54:00.529 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:54:00.554 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-2
+2022-01-13 20:54:00.554 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Found no committed offset for partition beacon-3
+2022-01-13 20:54:00.556 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:54:00.556 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-1 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:54:00.566 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:54:00.567 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-beacon-1, groupId=beacon] Resetting offset for partition beacon-3 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}.
+2022-01-13 20:54:00.567 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:54:00.660 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:00.660 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:01.168 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:01.168 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:01.687 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:01.687 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:02.204 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:02.204 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:02.723 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:02.723 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:03.244 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:03.244 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:03.764 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:03.764 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:04.282 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:04.282 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:04.817 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-2
+2022-01-13 20:54:04.817 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:04.863 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-13 20:54:04.863 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-13 20:54:04.864 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-01-13 20:54:09.421 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 1 for partition beacon-2
+2022-01-13 20:54:09.422 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:09.453 [http-nio-8080-exec-1] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.80.102:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-01-13 20:54:09.467 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 20:54:09.467 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 20:54:09.467 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078449467
+2022-01-13 20:54:09.473 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 20:54:09.876 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  com.onebit.beacon.Receiver - receiver message:[{"businessId":1000000120220113,"contentModel":{"content":"61520"},"deduplicationTime":1,"idType":10,"isNightShield":0,"messageTemplateId":1,"msgType":10,"receiver":["15623014301"],"sendAccount":66,"sendChannel":30,"templateType":10}]
+2022-01-13 20:54:09.897 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 2 for partition beacon-2
+2022-01-13 20:54:09.897 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:10.401 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:10.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:11.433 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:11.949 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:12.469 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:12.992 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:13.512 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:14.028 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:14.543 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:15.060 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 0 for partition beacon-3
+2022-01-13 20:54:15.565 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Seeking to offset 1 for partition beacon-3
+2022-01-13 20:54:20.909 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Revoke previously assigned partitions beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:54:20.910 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions revoked: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:54:20.910 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Member consumer-beacon-1-a3785466-092f-44ed-9219-0174371fe1bf sending LeaveGroup request to coordinator 192.168.80.102:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2022-01-13 20:54:20.925 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Unsubscribed all topics or patterns and assigned partitions
+2022-01-13 20:54:20.929 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2022-01-13 20:54:20.929 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-01-13 20:54:20.929 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2022-01-13 20:54:20.932 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-beacon-1 unregistered
+2022-01-13 20:54:20.932 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - beacon: Consumer stopped
+2022-01-13 20:54:20.935 [SpringApplicationShutdownHook] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2022-01-13 20:54:20.936 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2022-01-13 20:54:20.936 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-01-13 20:54:20.936 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2022-01-13 20:54:20.937 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2022-01-13 20:54:20.937 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 20:54:20.944 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-01-13 20:54:20.946 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-01-13 20:54:34.718 [main] INFO  com.onebit.beacon.BeaconApplication - Starting BeaconApplication using Java 1.8.0_261 on DESKTOP-3LE026R with PID 16436 (E:\IDEA_WorkSpace\beacon\beacon-web\target\classes started by dell in E:\IDEA_WorkSpace\beacon)
+2022-01-13 20:54:34.721 [main] INFO  com.onebit.beacon.BeaconApplication - No active profile set, falling back to default profiles: default
+2022-01-13 20:54:35.310 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-13 20:54:35.362 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2022-01-13 20:54:35.788 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-13 20:54:35.795 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:54:35.795 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 20:54:35.795 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-13 20:54:35.883 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 20:54:35.883 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1105 ms
+2022-01-13 20:54:35.990 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-01-13 20:54:36.176 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-01-13 20:54:36.213 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-13 20:54:36.257 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-13 20:54:36.387 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-13 20:54:36.497 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-13 20:54:37.001 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-13 20:54:37.011 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 20:54:37.970 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.80.102:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-beacon-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = beacon
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-13 20:54:38.151 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 20:54:38.152 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 20:54:38.152 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078478150
+2022-01-13 20:54:38.154 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Subscribed to topic(s): beacon
+2022-01-13 20:54:38.162 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-13 20:54:38.171 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-13 20:54:38.179 [main] INFO  com.onebit.beacon.BeaconApplication - Started BeaconApplication in 3.836 seconds (JVM running for 4.829)
+2022-01-13 20:54:38.424 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-beacon-1, groupId=beacon] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 20:54:38.426 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:54:38.427 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:54:38.445 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:54:38.448 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=7, memberId='consumer-beacon-1-b833535c-41bc-4d6c-b2af-905061fe4c2a', protocol='range'}
+2022-01-13 20:54:38.450 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 7: {consumer-beacon-1-b833535c-41bc-4d6c-b2af-905061fe4c2a=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 20:54:38.465 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=7, memberId='consumer-beacon-1-b833535c-41bc-4d6c-b2af-905061fe4c2a', protocol='range'}
+2022-01-13 20:54:38.466 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 20:54:38.469 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:54:38.475 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:54:38.476 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-1 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:54:38.476 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-2 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:54:38.476 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-3 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:54:38.476 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:54:43.926 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-13 20:54:43.926 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-13 20:54:43.927 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-01-13 20:55:00.529 [kafka-coordinator-heartbeat-thread | beacon] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response.isDisconnected: false. Rediscovery will be attempted.
+2022-01-13 20:55:01.845 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:55:01.857 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Attempt to heartbeat with Generation{generationId=7, memberId='consumer-beacon-1-b833535c-41bc-4d6c-b2af-905061fe4c2a', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+2022-01-13 20:55:01.858 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Giving away all assigned partitions as lost since generation has been reset,indicating that consumer is no longer part of the group
+2022-01-13 20:55:01.858 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Lost previously assigned partitions beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:55:01.858 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions lost: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:55:02.051 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions revoked: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:55:02.891 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:56:59.073 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:56:59.919 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] JoinGroup failed: The coordinator is not aware of this member. Need to re-join the group. Sent generation was Generation{generationId=-1, memberId='consumer-beacon-1-8207c207-396d-4599-b959-7d509d2a0ca3', protocol='null'}
+2022-01-13 20:56:59.920 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Rebalance failed.
+org.apache.kafka.common.errors.UnknownMemberIdException: The coordinator is not aware of this member.
+2022-01-13 20:56:59.920 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:56:59.931 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:56:59.933 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=9, memberId='consumer-beacon-1-f5a2f8cb-2f6f-4d96-9ab2-5447a1efaaf5', protocol='range'}
+2022-01-13 20:56:59.933 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 9: {consumer-beacon-1-f5a2f8cb-2f6f-4d96-9ab2-5447a1efaaf5=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 20:56:59.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=9, memberId='consumer-beacon-1-f5a2f8cb-2f6f-4d96-9ab2-5447a1efaaf5', protocol='range'}
+2022-01-13 20:56:59.937 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 20:56:59.937 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:56:59.938 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:56:59.938 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-1 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:56:59.939 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-2 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:56:59.939 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-3 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:56:59.939 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:57:03.145 [http-nio-8080-exec-1] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.80.102:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-01-13 20:57:03.229 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 20:57:03.230 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 20:57:03.231 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078623229
+2022-01-13 20:57:03.238 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 20:57:33.299 [kafka-coordinator-heartbeat-thread | beacon] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response.isDisconnected: false. Rediscovery will be attempted.
+2022-01-13 20:57:43.412 [kafka-coordinator-heartbeat-thread | beacon] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:57:48.831 [kafka-coordinator-heartbeat-thread | beacon] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:57:51.200 [kafka-coordinator-heartbeat-thread | beacon] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Attempt to heartbeat with Generation{generationId=9, memberId='consumer-beacon-1-f5a2f8cb-2f6f-4d96-9ab2-5447a1efaaf5', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+2022-01-13 20:58:37.050 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  com.onebit.beacon.Receiver - receiver message:[{"businessId":1000000120220113,"contentModel":{"content":"61520"},"deduplicationTime":1,"idType":10,"isNightShield":0,"messageTemplateId":1,"msgType":10,"receiver":["15623014301"],"sendAccount":66,"sendChannel":30,"templateType":10}]
+2022-01-13 20:58:37.052 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Failing OffsetCommit request since the consumer is not part of an active group
+2022-01-13 20:58:37.053 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: null.isDisconnected: true. Rediscovery will be attempted.
+2022-01-13 20:58:37.059 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:58:37.059 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable.isDisconnected: false. Rediscovery will be attempted.
+2022-01-13 20:58:37.161 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 20:58:37.161 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Giving away all assigned partitions as lost since generation has been reset,indicating that consumer is no longer part of the group
+2022-01-13 20:58:37.162 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Lost previously assigned partitions beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:58:37.162 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions lost: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:58:37.162 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions revoked: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:58:37.162 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:58:37.164 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 20:58:37.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=11, memberId='consumer-beacon-1-f7c32f40-1781-4553-a2f0-c4ac26889405', protocol='range'}
+2022-01-13 20:58:37.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 11: {consumer-beacon-1-f7c32f40-1781-4553-a2f0-c4ac26889405=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 20:58:37.178 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=11, memberId='consumer-beacon-1-f7c32f40-1781-4553-a2f0-c4ac26889405', protocol='range'}
+2022-01-13 20:58:37.179 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 20:58:37.179 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 20:58:37.188 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:58:37.188 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-1 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:58:37.188 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-2 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:58:37.188 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-3 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 20:58:37.189 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 20:58:40.060 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  com.onebit.beacon.Receiver - receiver message:[{"businessId":1000000120220113,"contentModel":{"content":"61520"},"deduplicationTime":1,"idType":10,"isNightShield":0,"messageTemplateId":1,"msgType":10,"receiver":["15623014301"],"sendAccount":66,"sendChannel":30,"templateType":10}]
+2022-01-13 21:01:07.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Revoke previously assigned partitions beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 21:01:07.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions revoked: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 21:01:07.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Member consumer-beacon-1-f7c32f40-1781-4553-a2f0-c4ac26889405 sending LeaveGroup request to coordinator 192.168.80.102:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2022-01-13 21:01:07.707 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Unsubscribed all topics or patterns and assigned partitions
+2022-01-13 21:01:07.718 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2022-01-13 21:01:07.718 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-01-13 21:01:07.719 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2022-01-13 21:01:07.720 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-beacon-1 unregistered
+2022-01-13 21:01:07.721 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - beacon: Consumer stopped
+2022-01-13 21:01:07.723 [SpringApplicationShutdownHook] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2022-01-13 21:01:07.725 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2022-01-13 21:01:07.725 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-01-13 21:01:07.725 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2022-01-13 21:01:07.725 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2022-01-13 21:01:07.726 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 21:01:07.728 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-01-13 21:01:07.730 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-01-13 21:01:10.682 [main] INFO  com.onebit.beacon.BeaconApplication - Starting BeaconApplication using Java 1.8.0_261 on DESKTOP-3LE026R with PID 7172 (E:\IDEA_WorkSpace\beacon\beacon-web\target\classes started by dell in E:\IDEA_WorkSpace\beacon)
+2022-01-13 21:01:10.684 [main] INFO  com.onebit.beacon.BeaconApplication - No active profile set, falling back to default profiles: default
+2022-01-13 21:01:11.180 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-13 21:01:11.223 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2022-01-13 21:01:11.578 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-01-13 21:01:11.584 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-01-13 21:01:11.585 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 21:01:11.585 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-13 21:01:11.675 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 21:01:11.676 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 964 ms
+2022-01-13 21:01:11.783 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-01-13 21:01:11.912 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-01-13 21:01:12.012 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-13 21:01:12.062 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-13 21:01:12.164 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-13 21:01:12.259 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-13 21:01:12.743 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-13 21:01:12.752 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-13 21:01:13.584 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.80.102:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-beacon-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = beacon
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-13 21:01:13.747 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 21:01:13.748 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 21:01:13.748 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078873633
+2022-01-13 21:01:13.750 [main] INFO  org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-beacon-1, groupId=beacon] Subscribed to topic(s): beacon
+2022-01-13 21:01:13.757 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-01-13 21:01:13.764 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-13 21:01:13.770 [main] INFO  com.onebit.beacon.BeaconApplication - Started BeaconApplication in 3.429 seconds (JVM running for 4.051)
+2022-01-13 21:01:13.974 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-beacon-1, groupId=beacon] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 21:01:13.975 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Discovered group coordinator 192.168.80.102:9092 (id: 2147483647 rack: null)
+2022-01-13 21:01:13.976 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 21:01:13.987 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] (Re-)joining group
+2022-01-13 21:01:13.989 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully joined group with generation Generation{generationId=13, memberId='consumer-beacon-1-c1f0a3ff-cd22-46fb-93c1-7f37b0d4c206', protocol='range'}
+2022-01-13 21:01:13.991 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Finished assignment for group at generation 13: {consumer-beacon-1-c1f0a3ff-cd22-46fb-93c1-7f37b0d4c206=Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])}
+2022-01-13 21:01:13.997 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Successfully synced group in generation Generation{generationId=13, memberId='consumer-beacon-1-c1f0a3ff-cd22-46fb-93c1-7f37b0d4c206', protocol='range'}
+2022-01-13 21:01:13.997 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Notifying assignor about the new Assignment(partitions=[beacon-0, beacon-1, beacon-2, beacon-3])
+2022-01-13 21:01:13.999 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Adding newly assigned partitions: beacon-0, beacon-1, beacon-2, beacon-3
+2022-01-13 21:01:14.006 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-0 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 21:01:14.006 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-1 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 21:01:14.006 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-2 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 21:01:14.006 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-beacon-1, groupId=beacon] Setting offset for partition beacon-3 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.80.102:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-13 21:01:14.007 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - beacon: partitions assigned: [beacon-0, beacon-1, beacon-2, beacon-3]
+2022-01-13 21:01:18.943 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-13 21:01:18.943 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-13 21:01:18.944 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-01-13 21:01:19.082 [http-nio-8080-exec-1] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.80.102:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-01-13 21:01:19.095 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2022-01-13 21:01:19.095 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2022-01-13 21:01:19.095 [http-nio-8080-exec-1] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1642078879095
+2022-01-13 21:01:19.101 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: PlZ7F8CFSbigCsSCqJLUvQ
+2022-01-13 21:01:19.931 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  com.onebit.beacon.Receiver - receiver message:[{"businessId":1000000120220113,"contentModel":{"content":"61520"},"deduplicationTime":1,"idType":10,"isNightShield":0,"messageTemplateId":1,"msgType":10,"receiver":["15623014301"],"sendAccount":66,"sendChannel":30,"templateType":10}]

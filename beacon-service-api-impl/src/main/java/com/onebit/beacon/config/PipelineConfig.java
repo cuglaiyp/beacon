@@ -1,7 +1,8 @@
 package com.onebit.beacon.config;
 
 import com.onebit.beacon.action.AssembleAction;
-import com.onebit.beacon.action.PreParamAction;
+import com.onebit.beacon.action.PostParamCheckAction;
+import com.onebit.beacon.action.PreParamCheckAction;
 import com.onebit.beacon.action.SendMqAction;
 import com.onebit.beacon.enums.BusinessCode;
 import com.onebit.beacon.pipeline.BusinessProcess;
@@ -47,15 +48,16 @@ public class PipelineConfig {
         ProcessTemplate processTemplate = new ProcessTemplate();
         List<BusinessProcess> processList = new ArrayList<>();
         processTemplate.setProcessList(processList);
-        processList.add(preParamAction());
+        processList.add(preParamCheckAction());
         processList.add(assembleAction());
+        processList.add(postParamCheckAction());
         processList.add(sendMqAction());
         return processTemplate;
     }
 
     @Bean
-    public BusinessProcess preParamAction() {
-        return new PreParamAction();
+    public BusinessProcess preParamCheckAction() {
+        return new PreParamCheckAction();
     }
 
     @Bean
@@ -64,8 +66,15 @@ public class PipelineConfig {
     }
 
     @Bean
+    public BusinessProcess postParamCheckAction(){
+        return new PostParamCheckAction();
+    }
+
+    @Bean
     public BusinessProcess sendMqAction() {
         return new SendMqAction();
     }
+
+
 
 }

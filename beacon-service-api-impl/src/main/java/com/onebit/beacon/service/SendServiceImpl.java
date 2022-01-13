@@ -65,8 +65,10 @@ public class SendServiceImpl implements SendService {
         ProcessContext context = ProcessContext.builder()
                 .code(batchSendRequest.getCode())
                 .processModel(sendTaskModel)
+                .needBreak(false)
+                .response(BasicResultVO.success())
                 .build();
-        processController.process(context);
+        context = processController.process(context);
         return SendResponse.builder().code(context.getCode()).msg(context.getResponse().getMsg()).build();
     }
 }

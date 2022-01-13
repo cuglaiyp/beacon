@@ -42,8 +42,7 @@ public class AssembleAction implements BusinessProcess {
             // 查询模板
             Optional<MessageTemplate> messageTemplate = messageTemplateDao.findById(messageTemplateId);
             if (!messageTemplate.isPresent() || messageTemplate.get().getIsDeleted().equals(BeaconConstant.TRUE)) {
-                context
-                        .setNeedBreak(true)
+                context.setNeedBreak(true)
                         .setResponse(BasicResultVO.fail(RespStatusEnum.TEMPLATE_NOT_FOUND));
                 return;
             }
@@ -52,8 +51,7 @@ public class AssembleAction implements BusinessProcess {
             sendTaskModel.setTaskInfoList(taskInfos);
         }catch (Exception e) {
             // 组装消息有异常
-            context
-                    .setNeedBreak(true)
+            context.setNeedBreak(true)
                     .setResponse(BasicResultVO.fail(RespStatusEnum.SERVICE_ERROR));
             log.error("assemble task info fail! template: {}, e: {}", messageTemplateId, Throwables.getStackTraceAsString(e));
         }

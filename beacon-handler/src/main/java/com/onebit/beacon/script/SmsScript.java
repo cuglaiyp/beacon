@@ -1,6 +1,6 @@
 package com.onebit.beacon.script;
 
-import com.onebit.beacon.pojo.SmsParam;
+import com.onebit.beacon.domain.SmsParam;
 import com.onebit.beacon.domain.SmsRecord;
 
 import java.util.List;

@@ -9,7 +9,7 @@ import com.onebit.beacon.enums.IdType;
 import com.onebit.beacon.enums.RespStatusEnum;
 import com.onebit.beacon.pipeline.BusinessProcess;
 import com.onebit.beacon.pipeline.ProcessContext;
-import com.onebit.beacon.pojo.TaskInfo;
+import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.vo.BasicResultVO;
 import lombok.extern.slf4j.Slf4j;
 
@@ -40,6 +40,10 @@ public class PostParamCheckAction implements BusinessProcess {
         }
     }
 
+    /**
+     * 如果指定类型是手机号，且渠道是发送短信，检测输入手机号是否合法
+     * @param taskInfoList
+     */
     private void filterIllegalPhoneNum(List<TaskInfo> taskInfoList) {
         Integer idType = taskInfoList.get(0).getIdType();
         Integer sendChannel = taskInfoList.get(0).getSendChannel();

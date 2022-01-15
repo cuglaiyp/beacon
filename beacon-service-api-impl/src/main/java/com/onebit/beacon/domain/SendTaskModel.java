@@ -1,7 +1,6 @@
 package com.onebit.beacon.domain;
 
 import com.onebit.beacon.pipeline.ProcessModel;
-import com.onebit.beacon.pojo.TaskInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

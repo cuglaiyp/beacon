@@ -1,13 +1,34 @@
 package com.onebit.beacon.handler;
 
-import com.onebit.beacon.pojo.TaskInfo;
+import com.onebit.beacon.domain.TaskInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @Author: Onebit
  * @Date: 2022/1/12
  */
-public interface Handler {
+public abstract class Handler {
+
+    /**
+     * 子类生成时指定
+     */
+    protected Integer channelCode;
+
+    @Autowired
+    private HandlerHolder handlerHolder;
+
+    // 子类生成时指定 channelCode，然后执行 init 方法，将自己放入 handlerHolder
+    @PostConstruct
+    private void init() {
+        handlerHolder.putHandler(channelCode, this);
+    }
 
     // 同时也需要在 SmsParam 上面包装一层任务——任务持有发送信息的所有额外信息
-    boolean doHandler(TaskInfo taskInfo);
+    public void doHandle(TaskInfo taskInfo) {
+        handle(taskInfo);
+    }
+
+    public abstract void handle(TaskInfo taskInfo);
 }

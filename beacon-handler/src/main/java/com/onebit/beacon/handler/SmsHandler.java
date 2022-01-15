@@ -5,8 +5,9 @@ import cn.hutool.core.util.StrUtil;
 import com.onebit.beacon.dao.SmsRecordDao;
 import com.onebit.beacon.domain.SmsRecord;
 import com.onebit.beacon.dto.SmsContentModel;
-import com.onebit.beacon.pojo.SmsParam;
-import com.onebit.beacon.pojo.TaskInfo;
+import com.onebit.beacon.enums.ChannelType;
+import com.onebit.beacon.domain.SmsParam;
+import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.script.SmsScript;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,11 @@ import java.util.List;
  * @Date: 2022/1/12
  */
 @Component
-public class SmsHandler implements Handler {
+public class SmsHandler extends Handler {
+
+    public SmsHandler(){
+        this.channelCode = ChannelType.SMS.getCode();
+    }
 
     @Autowired
     private SmsRecordDao smsRecordDao;
@@ -27,7 +32,7 @@ public class SmsHandler implements Handler {
     private SmsScript smsScript;
 
     @Override
-    public boolean doHandler(TaskInfo taskInfo) {
+    public void handle(TaskInfo taskInfo) {
         SmsContentModel smsContentModel = (SmsContentModel) taskInfo.getContentModel();
         String trueContent = smsContentModel.getContent();
         if (!StrUtil.isBlank(smsContentModel.getUrl())) {
@@ -47,8 +52,6 @@ public class SmsHandler implements Handler {
         if(CollUtil.isNotEmpty(smsRecords)) {
             // 接着调用 dao 入库
             smsRecordDao.saveAll(smsRecords);
-            return true;
         }
-        return false;
     }
 }

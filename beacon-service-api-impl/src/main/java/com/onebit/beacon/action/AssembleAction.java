@@ -15,9 +15,9 @@ import com.onebit.beacon.enums.ChannelType;
 import com.onebit.beacon.enums.RespStatusEnum;
 import com.onebit.beacon.pipeline.BusinessProcess;
 import com.onebit.beacon.pipeline.ProcessContext;
-import com.onebit.beacon.pojo.TaskInfo;
-import com.onebit.beacon.utils.ContentHolderUtils;
-import com.onebit.beacon.utils.TaskInfoUtils;
+import com.onebit.beacon.domain.TaskInfo;
+import com.onebit.beacon.util.ContentHolderUtil;
+import com.onebit.beacon.util.TaskInfoUtil;
 import com.onebit.beacon.vo.BasicResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,7 +70,7 @@ public class AssembleAction implements BusinessProcess {
         for (MessageParam messageParam : messageParamList) {
             TaskInfo taskInfo = TaskInfo.builder()
                     .messageTemplateId(messageTemplate.getId())
-                    .businessId(TaskInfoUtils.generateBusinessId(messageTemplate.getId(), messageTemplate.getTemplateType()))
+                    .businessId(TaskInfoUtil.generateBusinessId(messageTemplate.getId(), messageTemplate.getTemplateType()))
                     .receiver(new HashSet<>(Arrays.asList(messageParam.getReceiver().split(String.valueOf(StrUtil.C_COMMA)))))
                     .idType(messageTemplate.getIdType())
                     .sendChannel(messageTemplate.getSendChannel())
@@ -109,7 +109,7 @@ public class AssembleAction implements BusinessProcess {
             String originValue = jsonObject.getString(field.getName());
 
             if (StrUtil.isNotBlank(originValue)) {
-                String resultValue = ContentHolderUtils.replacePlaceHolder(originValue, variables);
+                String resultValue = ContentHolderUtil.replacePlaceHolder(originValue, variables);
                 ReflectUtil.setFieldValue(contentModel, field, resultValue);
             }
         }

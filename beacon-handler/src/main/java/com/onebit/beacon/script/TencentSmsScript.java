@@ -6,7 +6,7 @@ import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Throwables;
 import com.onebit.beacon.enums.SmsStatus;
-import com.onebit.beacon.pojo.SmsParam;
+import com.onebit.beacon.domain.SmsParam;
 import com.onebit.beacon.domain.SmsRecord;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;

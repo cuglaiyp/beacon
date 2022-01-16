@@ -2,8 +2,10 @@ package com.onebit.beacon.service.deduplication;
 
 import cn.hutool.core.collection.CollUtil;
 import com.onebit.beacon.constant.BeaconConstant;
+import com.onebit.beacon.domain.AnchorInfo;
 import com.onebit.beacon.domain.DeduplicationParam;
 import com.onebit.beacon.domain.TaskInfo;
+import com.onebit.beacon.util.LogUtil;
 import com.onebit.beacon.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +51,16 @@ public abstract class AbstractDeduplicationService {
         putInRedis(readyPutRedisReceivers, inRedisValue, param);
 
         // 剔除需要去重的用户
-        taskInfo.getReceiver().removeAll(filterReceiver);
+        if (CollUtil.isNotEmpty(filterReceiver)) {
+            taskInfo.getReceiver().removeAll(filterReceiver);
+            LogUtil.print(
+                    AnchorInfo.builder()
+                            .businessId(taskInfo.getBusinessId())
+                            .ids(filterReceiver)
+                            .state(param.getAnchorState().getCode())
+                            .build()
+            );
+        }
     }
 
     /**

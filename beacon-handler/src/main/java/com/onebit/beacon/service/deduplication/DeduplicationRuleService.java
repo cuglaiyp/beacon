@@ -3,6 +3,7 @@ package com.onebit.beacon.service.deduplication;
 import cn.hutool.core.date.DateUtil;
 import com.onebit.beacon.domain.DeduplicationParam;
 import com.onebit.beacon.domain.TaskInfo;
+import com.onebit.beacon.enums.AnchorState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class DeduplicationRuleService {
                 .deduplicationTime(300L)
                 .countNum(1)
                 .taskInfo(taskInfo)
+                .anchorState(AnchorState.CONTENT_DEDUPLICATION)
                 .build();
         contentDeduplicationService.deduplication(contentParam);
 
@@ -36,6 +38,7 @@ public class DeduplicationRuleService {
                 .deduplicationTime(seconds)
                 .countNum(5)
                 .taskInfo(taskInfo)
+                .anchorState(AnchorState.RULE_DEDUPLICATION)
                 .build();
         frequencyDeduplicationService.deduplication(freParam);
     }

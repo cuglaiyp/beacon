@@ -1,5 +1,6 @@
 package com.onebit.beacon.service;
 
+import cn.monitor4all.logRecord.annotation.OperationLog;
 import com.onebit.beacon.domain.BatchSendRequest;
 import com.onebit.beacon.domain.SendRequest;
 import com.onebit.beacon.domain.SendResponse;
@@ -30,6 +31,7 @@ public class SendServiceImpl implements SendService {
     private ProcessController processController;
 
     @Override
+    @OperationLog(bizType = "SendService#send", bizId = "#sendRequest.messageTemplateId", msg = "#sendReuqest")
     public SendResponse send(SendRequest sendRequest) {
         /**
          * 请求进来后得让流水线进行处理，流水线需要啥？上下文（ProcessContext）! 上下文除了一些常见数据还需要啥？数据（ProcessModel）
@@ -54,6 +56,7 @@ public class SendServiceImpl implements SendService {
     }
 
     @Override
+    @OperationLog(bizType = "SendService#batchSend", bizId = "#batchSendRequest.messageTemplateId", msg = "#batchSendRequest")
     public SendResponse batchSend(BatchSendRequest batchSendRequest) {
         // 1. 构建 ProcessModel
         // ProcessModel 是接口，我们需要自定自己的业务的是数据类型

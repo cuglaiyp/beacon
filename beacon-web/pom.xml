@@ -12,6 +12,20 @@
     <artifactId>beacon-web</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.onebit</groupId>
+            <artifactId>beacon-service-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.onebit</groupId>
+            <artifactId>beacon-service-api-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
         <!--引入springmvc-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -29,16 +43,16 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
+        <!--监控-->
         <dependency>
-            <groupId>com.onebit</groupId>
-            <artifactId>beacon-service-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
+        <!--监控信息采集-->
         <dependency>
-            <groupId>com.onebit</groupId>
-            <artifactId>beacon-service-api-impl</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
     </dependencies>

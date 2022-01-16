@@ -63,6 +63,11 @@ public class SmsRecord {
     private String reportContent;
 
     /**
+     * 短信内容
+     */
+    private String messageContent;
+
+    /**
      * 短信状态
      */
     private Integer status;

@@ -3,11 +3,9 @@ package com.onebit.beacon.script;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.IdUtil;
-import com.alibaba.fastjson.JSON;
-import com.google.common.base.Throwables;
-import com.onebit.beacon.enums.SmsStatus;
 import com.onebit.beacon.domain.SmsParam;
 import com.onebit.beacon.domain.SmsRecord;
+import com.onebit.beacon.enums.SmsStatus;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
@@ -62,35 +60,29 @@ public class TencentSmsScript implements SmsScript {
     @Value("${tencent.sms.account.sign_name}")
     private String SIGN_NAME;
 
-    public List<SmsRecord> send(SmsParam smsParam) {
-        try {
+    public List<SmsRecord> send(SmsParam smsParam) throws TencentCloudSDKException {
 
-            /**
-             * 初始化 client
-             */
-            // 包装成方法
-            SmsClient client = init();
-            /**
-             * 组装发送短信参数
-             */
-            // 包装成方法
-            SendSmsRequest req = assembleReq(smsParam);
-
-
-            /**
-             * 请求，返回结果
-             */
-            SendSmsResponse resp = client.SendSms(req);
-            // 返回结果也需要处理 SmsRecord，需要返回集合
-            List<SmsRecord> smsRecords = assembleSmsRecord(smsParam, resp);
-            return smsRecords;
+        /**
+         * 初始化 client
+         */
+        // 包装成方法
+        SmsClient client = init();
+        /**
+         * 组装发送短信参数
+         */
+        // 包装成方法
+        SendSmsRequest req = assembleReq(smsParam);
 
 
-        } catch (TencentCloudSDKException e) {
-            log.error("send tencent sms fail!{},params:{}",
-                    Throwables.getStackTraceAsString(e), JSON.toJSONString(smsParam));
-            return null;
-        }
+        /**
+         * 请求，返回结果
+         */
+        SendSmsResponse resp = client.SendSms(req);
+        // 返回结果也需要处理 SmsRecord，需要返回集合
+        List<SmsRecord> smsRecords = assembleSmsRecord(smsParam, resp);
+        return smsRecords;
+
+
     }
 
     private SmsClient init() {

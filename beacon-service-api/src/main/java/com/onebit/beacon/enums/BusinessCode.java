@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
+ * 关联流水线的 code
+ *
  * @Author: Onebit
  * @Date: 2022/1/13
  */

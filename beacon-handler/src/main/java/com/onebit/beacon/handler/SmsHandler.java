@@ -2,13 +2,17 @@ package com.onebit.beacon.handler;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
+import com.alibaba.fastjson.JSON;
+import com.google.common.base.Throwables;
 import com.onebit.beacon.dao.SmsRecordDao;
+import com.onebit.beacon.domain.SmsParam;
 import com.onebit.beacon.domain.SmsRecord;
+import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.dto.SmsContentModel;
 import com.onebit.beacon.enums.ChannelType;
-import com.onebit.beacon.domain.SmsParam;
-import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.script.SmsScript;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +23,7 @@ import java.util.List;
  * @Date: 2022/1/12
  */
 @Component
+@Slf4j
 public class SmsHandler extends Handler {
 
     public SmsHandler(){
@@ -32,7 +37,7 @@ public class SmsHandler extends Handler {
     private SmsScript smsScript;
 
     @Override
-    public void handle(TaskInfo taskInfo) {
+    public boolean handle(TaskInfo taskInfo) {
         SmsContentModel smsContentModel = (SmsContentModel) taskInfo.getContentModel();
         String trueContent = smsContentModel.getContent();
         if (!StrUtil.isBlank(smsContentModel.getUrl())) {
@@ -48,10 +53,18 @@ public class SmsHandler extends Handler {
                 .supplierName("腾讯云通知类消息渠道")
                 .build();
         // 接着发送消息，并返回回执
-        List<SmsRecord> smsRecords = smsScript.send(smsParam);
-        if(CollUtil.isNotEmpty(smsRecords)) {
-            // 接着调用 dao 入库
-            smsRecordDao.saveAll(smsRecords);
+        List<SmsRecord> smsRecords = null;
+        try {
+            smsRecords = smsScript.send(smsParam);
+            if(CollUtil.isNotEmpty(smsRecords)) {
+                // 接着调用 dao 入库
+                smsRecordDao.saveAll(smsRecords);
+            }
+            return true;
+        } catch (TencentCloudSDKException e) {
+            log.error("SmsHandler#handler fail:{},params:{}",
+                    Throwables.getStackTraceAsString(e), JSON.toJSONString(smsParam));
         }
+        return false;
     }
 }

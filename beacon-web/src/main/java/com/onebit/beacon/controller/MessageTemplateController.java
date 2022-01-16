@@ -4,6 +4,10 @@ import cn.hutool.core.date.DateUtil;
 import com.alibaba.fastjson.JSON;
 import com.onebit.beacon.dao.MessageTemplateDao;
 import com.onebit.beacon.domain.MessageTemplate;
+import com.onebit.beacon.enums.ChannelType;
+import com.onebit.beacon.enums.IdType;
+import com.onebit.beacon.enums.MessageType;
+import com.onebit.beacon.enums.TemplateType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,16 +33,16 @@ public class MessageTemplateController {
                 .name("test短信")
                 .auditStatus(10)
                 .flowId("yyyy")
-                .msgStatus(10)
-                .idType(10)
-                .sendChannel(10)
-                .templateType(10)
-                .msgType(10)
+                .messageStatus(10)
+                .idType(IdType.USER_ID.getCode())
+                .sendChannel(ChannelType.IM.getCode())
+                .templateType(TemplateType.TECHNOLOGY.getCode())
+                .messageType(MessageType.AUTH_CODE.getCode())
                 .expectPushTime("0")
-                .msgContent("{\"content\":\"{$contentValue}\"}")
+                .messageContent("{\"content\":\"{$contentValue}\"}")
                 .sendAccount(66)
                 .creator("yyyyc")
-                .updator("yyyyu")
+                .updater("yyyyu")
                 .team("yyyt")
                 .proposer("yyyy22")
                 .auditor("yyyyyyz")

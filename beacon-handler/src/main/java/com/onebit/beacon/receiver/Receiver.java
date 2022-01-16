@@ -1,10 +1,14 @@
 package com.onebit.beacon.receiver;
 
 import com.alibaba.fastjson.JSON;
+import com.onebit.beacon.domain.AnchorInfo;
+import com.onebit.beacon.domain.LogParam;
+import com.onebit.beacon.enums.AnchorState;
 import com.onebit.beacon.pending.Task;
 import com.onebit.beacon.pending.TaskPendingHolder;
 import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.util.GroupIdMappingUtil;
+import com.onebit.beacon.util.LogUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +29,8 @@ import java.util.Optional;
 @Slf4j
 public class Receiver {
 
+    private static final String LOG_BIZ_TYPE = "Receiver#consume";
+
     @Autowired
     private ApplicationContext applicationContext;
 
@@ -41,6 +47,18 @@ public class Receiver {
             String taskInfoGroupId = GroupIdMappingUtil.getGroupIdByTaskInfo(taskInfoList.get(0));
             if (taskInfoGroupId.equals(topicGroupId)) {
                 for (TaskInfo taskInfo : taskInfoList) {
+                    LogUtil.print(
+                            LogParam.builder()
+                                    .bizType(LOG_BIZ_TYPE)
+                                    .object(taskInfo)
+                                    .build()
+                            ,
+                            AnchorInfo.builder()
+                                    .businessId(taskInfo.getBusinessId())
+                                    .ids(taskInfo.getReceiver())
+                                    .state(AnchorState.RECEIVE.getCode())
+                                    .build()
+                    );
                     // 1. 创建任务
                     // 在 config.PrototypeBeanConfig.class 中定义了原型模式，所以是线程安全的
                     Task task = applicationContext.getBean(Task.class).setTaskInfo(taskInfo);

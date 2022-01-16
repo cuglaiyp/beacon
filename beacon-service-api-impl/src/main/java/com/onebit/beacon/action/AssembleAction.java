@@ -75,7 +75,7 @@ public class AssembleAction implements BusinessProcess {
                     .idType(messageTemplate.getIdType())
                     .sendChannel(messageTemplate.getSendChannel())
                     .templateType(messageTemplate.getTemplateType())
-                    .msgType(messageTemplate.getMsgType())
+                    .msgType(messageTemplate.getMessageType())
                     .sendAccount(messageTemplate.getSendAccount())
                     .contentModel(getContentModelValue(messageTemplate, messageParam))
                     .deduplicationTime(messageTemplate.getDeduplicationTime())
@@ -97,7 +97,7 @@ public class AssembleAction implements BusinessProcess {
     private static ContentModel getContentModelValue(MessageTemplate messageTemplate, MessageParam messageParam) {
         Integer sendChannel = messageTemplate.getSendChannel();
         Map<String, String> variables = messageParam.getVariables();
-        JSONObject jsonObject = JSON.parseObject(messageTemplate.getMsgContent());
+        JSONObject jsonObject = JSON.parseObject(messageTemplate.getMessageContent());
         Class contentModelClass = ChannelType.getChanelModelClassByCode(sendChannel);
 
         /**

@@ -1,6 +1,9 @@
 package com.onebit.beacon.handler;
 
+import com.onebit.beacon.domain.AnchorInfo;
 import com.onebit.beacon.domain.TaskInfo;
+import com.onebit.beacon.enums.AnchorState;
+import com.onebit.beacon.util.LogUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
@@ -27,8 +30,23 @@ public abstract class Handler {
 
     // 同时也需要在 SmsParam 上面包装一层任务——任务持有发送信息的所有额外信息
     public void doHandle(TaskInfo taskInfo) {
-        handle(taskInfo);
+        if (!handle(taskInfo)) {
+            LogUtil.print(
+                    AnchorInfo.builder()
+                            .businessId(taskInfo.getBusinessId())
+                            .state(AnchorState.SEND_FAIL.getCode())
+                            .ids(taskInfo.getReceiver())
+                            .build()
+            );
+        }
+        LogUtil.print(
+                AnchorInfo.builder()
+                        .businessId(taskInfo.getBusinessId())
+                        .state(AnchorState.SEND_SUCCESS.getCode())
+                        .ids(taskInfo.getReceiver())
+                        .build()
+        );
     }
 
-    public abstract void handle(TaskInfo taskInfo);
+    public abstract boolean handle(TaskInfo taskInfo);
 }

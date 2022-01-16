@@ -42,7 +42,7 @@ public class MessageTemplate {
     /**
      * 消息状态
      */
-    private Integer msgStatus;
+    private Integer messageStatus; // 不是很懂为什么需要消息状态
 
     /**
      * 发送的Id类型
@@ -62,7 +62,7 @@ public class MessageTemplate {
     /**
      * 消息类型
      */
-    private Integer msgType;
+    private Integer messageType;
 
     /**
      * 推送消息的时间
@@ -74,7 +74,7 @@ public class MessageTemplate {
     /**
      * 消息内容  {$var} 为占位符
      */
-    private String msgContent;
+    private String messageContent;
 
     /**
      * 发送账号（邮件下可有多个发送账号、短信可有多个发送账号..）
@@ -89,7 +89,7 @@ public class MessageTemplate {
     /**
      * 修改者
      */
-    private String updator;
+    private String updater;
 
     /**
      * 审核者

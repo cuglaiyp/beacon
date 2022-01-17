@@ -9,7 +9,7 @@ import java.util.Set;
 @Builder
 public class SmsParam {
     /**
-     * 业务Id
+     * 模板id
      */
     private Long messageTemplateId;
 
@@ -24,12 +24,7 @@ public class SmsParam {
     private String content;
 
     /**
-     * 渠道商Id
+     * 发送账号
      */
-    private Integer supplierId;
-
-    /**
-     * 渠道商名字，也就是用谁发（腾讯云、阿里云等等）
-     */
-    private String supplierName;
+    private Integer sendAccount;
 }

@@ -10,12 +10,12 @@ import com.onebit.beacon.dao.MessageTemplateDao;
 import com.onebit.beacon.domain.MessageParam;
 import com.onebit.beacon.domain.MessageTemplate;
 import com.onebit.beacon.domain.SendTaskModel;
+import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.dto.ContentModel;
 import com.onebit.beacon.enums.ChannelType;
 import com.onebit.beacon.enums.RespStatusEnum;
 import com.onebit.beacon.pipeline.BusinessProcess;
 import com.onebit.beacon.pipeline.ProcessContext;
-import com.onebit.beacon.domain.TaskInfo;
 import com.onebit.beacon.util.ContentHolderUtil;
 import com.onebit.beacon.util.TaskInfoUtil;
 import com.onebit.beacon.vo.BasicResultVO;
@@ -112,6 +112,13 @@ public class AssembleAction implements BusinessProcess {
                 String resultValue = ContentHolderUtil.replacePlaceHolder(originValue, variables);
                 ReflectUtil.setFieldValue(contentModel, field, resultValue);
             }
+        }
+
+        // 如果模板内容有 url 字段，则在 url 字段上拼接埋点参数
+        String url = (String) ReflectUtil.getFieldValue(contentModel, "url");
+        if (StrUtil.isNotBlank(url)) {
+            String resUrl = TaskInfoUtil.generateUrl(url, messageTemplate.getId(), messageTemplate.getTemplateType());
+            ReflectUtil.setFieldValue(contentModel,"url" , resUrl);
         }
         return contentModel;
     }

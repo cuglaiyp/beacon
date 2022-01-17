@@ -26,7 +26,7 @@ import java.util.List;
 @Slf4j
 public class SmsHandler extends Handler {
 
-    public SmsHandler(){
+    public SmsHandler() {
         this.channelCode = ChannelType.SMS.getCode();
     }
 
@@ -48,15 +48,12 @@ public class SmsHandler extends Handler {
                 .phones(taskInfo.getReceiver())
                 .messageTemplateId(taskInfo.getMessageTemplateId())
                 .content(trueContent)
-                // 目前只用了腾讯云，先写死这个
-                .supplierId(10)
-                .supplierName("腾讯云通知类消息渠道")
+                .sendAccount(taskInfo.getSendAccount())
                 .build();
         // 接着发送消息，并返回回执
-        List<SmsRecord> smsRecords = null;
         try {
-            smsRecords = smsScript.send(smsParam);
-            if(CollUtil.isNotEmpty(smsRecords)) {
+            List<SmsRecord> smsRecords = smsScript.send(smsParam);
+            if (CollUtil.isNotEmpty(smsRecords)) {
                 // 接着调用 dao 入库
                 smsRecordDao.saveAll(smsRecords);
             }
@@ -64,7 +61,7 @@ public class SmsHandler extends Handler {
         } catch (TencentCloudSDKException e) {
             log.error("SmsHandler#handler fail:{},params:{}",
                     Throwables.getStackTraceAsString(e), JSON.toJSONString(smsParam));
+            return false;
         }
-        return false;
     }
 }

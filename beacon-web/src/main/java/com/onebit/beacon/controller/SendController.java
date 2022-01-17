@@ -1,16 +1,12 @@
 package com.onebit.beacon.controller;
 
-import com.onebit.beacon.domain.MessageParam;
 import com.onebit.beacon.domain.SendRequest;
 import com.onebit.beacon.domain.SendResponse;
-import com.onebit.beacon.enums.BusinessCode;
 import com.onebit.beacon.service.SendService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  *  发送短信的业务由 web 请求而来，web 请求封装成 common 中的 pojo，并交由 handler 处理
@@ -22,17 +18,13 @@ public class SendController {
     @Autowired
     private SendService sendService;
 
-    @GetMapping("/sendSms")
-    public SendResponse sendSms(String phone) {
-        Map<String, String> variables = new HashMap<>();
-        variables.put("contentValue", "61520");
-        MessageParam messageParam = new MessageParam()
-                .setReceiver(phone)
-                .setVariables(variables);
-        SendRequest sendRequest = new SendRequest()
-                .setCode(BusinessCode.COMMON_SEND.getCode())
-                .setMessageTemplateId(1l)
-                .setMessageParam(messageParam);
+    /**
+     * 发送消息接口
+     * 示例：curl -XPOST "127.0.0.1:8080/send"  -H "Content-Type: application/json"  -d "{\"code\":\"send\",\"messageParam\":{\"receiver\":\"15623014301\",\"variables\":{\"title\":\"yyyyyy\",\"contentValue\":\"6666164180\"}},\"messageTemplateId\":2}"
+     * @return
+     */
+    @PostMapping("/send")
+    public SendResponse send(@RequestBody SendRequest sendRequest) {
         return sendService.send(sendRequest);
     }
 }

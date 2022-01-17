@@ -20,7 +20,7 @@ public class SendController {
 
     /**
      * 发送消息接口
-     * 示例：curl -XPOST "127.0.0.1:8080/send"  -H "Content-Type: application/json"  -d "{\"code\":\"send\",\"messageParam\":{\"receiver\":\"15623014301\",\"variables\":{\"title\":\"yyyyyy\",\"contentValue\":\"6666164180\"}},\"messageTemplateId\":2}"
+     * 示例：curl -XPOST "127.0.0.1:8080/send"  -H "Content-Type: application/json"  -d "{\"code\":\"send\",\"messageParam\":{\"receiver\":\"1585962327@qq.com\",\"variables\":{\"title\":\"yyyyyy\",\"contentValue\":\"6666164180\"}},\"messageTemplateId\":2}"
      * @return
      */
     @PostMapping("/send")

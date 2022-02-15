@@ -1,4 +1,4 @@
-package com.onebit.beacon.service.deduplication;
+package com.onebit.beacon.service.deduplication.service;
 
 import cn.hutool.crypto.digest.DigestUtil;
 import com.alibaba.fastjson.JSON;

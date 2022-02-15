@@ -24,7 +24,7 @@ public final class BasicResultVO<T> {
     /**
      * 响应状态码
      */
-    private String code;
+    private String status;
     /**
      * 响应消息
      */
@@ -45,7 +45,7 @@ public final class BasicResultVO<T> {
     }
 
     public BasicResultVO(RespStatusEnum status, String msg, T data) {
-        this.code = status.getCode();
+        this.status = status.getCode();
         this.msg = msg;
         this.data = data;
     }
@@ -58,21 +58,24 @@ public final class BasicResultVO<T> {
     }
 
     /**
+     * 自定义消息的成功响应
+     *
      * @param msg
-     * @return 自定义消息的成功响应
+     * @return
      */
     public static <T> BasicResultVO<T> success(String msg) {
         return new BasicResultVO<>(RespStatusEnum.SUCCESS, msg, null);
     }
 
     /**
-     * @param msg
+     * 带数据的成功响应
+     *
      * @param data
      * @param <T>
-     * @return 带数据和自定义消息的成功响应
+     * @return
      */
-    public static <T> BasicResultVO<T> success(String msg, T data) {
-        return new BasicResultVO<>(RespStatusEnum.SUCCESS, msg, data);
+    public static <T> BasicResultVO<T> success(T data) {
+        return new BasicResultVO<>(RespStatusEnum.SUCCESS, data);
     }
 
     // 成功和失败定义的一些默认方法不一样，是因为成功的状态只有一种，我们可以全部列出来；而失败的状态太多，只能让用户传
@@ -85,13 +88,14 @@ public final class BasicResultVO<T> {
     }
 
     /**
+     * 自定义失败状态的响应
+     *
      * @param status
-     * @return 自定义失败状态的响应
+     * @return
      */
     public static <T> BasicResultVO<T> fail(RespStatusEnum status) {
         return new BasicResultVO<>(status);
     }
-
 
 
 }

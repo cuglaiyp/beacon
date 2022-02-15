@@ -1,15 +1,17 @@
-package com.onebit.beacon.service.deduplication;
+package com.onebit.beacon.service.deduplication.service;
 
 import cn.hutool.core.collection.CollUtil;
 import com.onebit.beacon.constant.BeaconConstant;
 import com.onebit.beacon.domain.AnchorInfo;
 import com.onebit.beacon.domain.DeduplicationParam;
 import com.onebit.beacon.domain.TaskInfo;
+import com.onebit.beacon.service.deduplication.DeduplicationHolder;
 import com.onebit.beacon.util.LogUtil;
 import com.onebit.beacon.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.PostConstruct;
 import java.util.*;
 
 /**
@@ -19,7 +21,18 @@ import java.util.*;
  * @Date: 2022/1/14
  */
 @Slf4j
-public abstract class AbstractDeduplicationService {
+public abstract class AbstractDeduplicationService implements DeduplicationService {
+
+    protected Integer deduplicationType;
+
+    @Autowired
+    private DeduplicationHolder deduplicationHolder;
+
+    @PostConstruct
+    private void init() {
+        // 存入 Holder
+        deduplicationHolder.putService(deduplicationType, this);
+    }
 
     @Autowired
     private RedisUtil redisUtil;
@@ -87,6 +100,13 @@ public abstract class AbstractDeduplicationService {
      */
     protected abstract String deduplicationSingleKey(TaskInfo taskInfo, String receiver);
 
+    /**
+     * 存入 redis 实现去重
+     *
+     * @param readyPutRedisReceivers
+     * @param inRedisValue
+     * @param param
+     */
     private void putInRedis(Set<String> readyPutRedisReceivers,
                             Map<String, String> inRedisValue, DeduplicationParam param) {
         Map<String, String> keyValues = new HashMap<>(readyPutRedisReceivers.size());

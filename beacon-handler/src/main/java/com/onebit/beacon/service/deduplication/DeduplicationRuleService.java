@@ -1,13 +1,15 @@
 package com.onebit.beacon.service.deduplication;
 
-import cn.hutool.core.date.DateUtil;
+import com.ctrip.framework.apollo.Config;
+import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
+import com.onebit.beacon.constant.BeaconConstant;
 import com.onebit.beacon.domain.DeduplicationParam;
 import com.onebit.beacon.domain.TaskInfo;
-import com.onebit.beacon.enums.AnchorState;
+import com.onebit.beacon.enums.DeduplicationType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.util.List;
 
 /**
  * @Author: Onebit
@@ -16,30 +18,27 @@ import java.util.Date;
 @Service
 public class DeduplicationRuleService {
 
-    @Autowired
-    private ContentDeduplicationService contentDeduplicationService;
+    public static final String DEDUPLICATION_RULE_KEY = "deduplication";
+
+    @ApolloConfig("onebit.beacon")
+    private Config config;
 
     @Autowired
-    private FrequencyDeduplicationService frequencyDeduplicationService;
+    private DeduplicationHolder deduplicationHolder;
 
     public void deduplicate(TaskInfo taskInfo) {
-        // 内容去重
-        DeduplicationParam contentParam = DeduplicationParam.builder()
-                .deduplicationTime(300L)
-                .countNum(1)
-                .taskInfo(taskInfo)
-                .anchorState(AnchorState.CONTENT_DEDUPLICATION)
-                .build();
-        contentDeduplicationService.deduplication(contentParam);
+        // 获取配置：配置样例：{"deduplication_10":{"num":1,"time":300},"deduplication_20":{"num":5}}
+        String deduplicationConfig = config.getProperty(DEDUPLICATION_RULE_KEY, BeaconConstant.APOLLO_DEFAULT_VALUE_JSON_OBJECT);
 
-        // 频次去重
-        Long seconds = (DateUtil.endOfDay(new Date()).getTime() - DateUtil.current()) / 1000;
-        DeduplicationParam freParam = DeduplicationParam.builder()
-                .deduplicationTime(seconds)
-                .countNum(5)
-                .taskInfo(taskInfo)
-                .anchorState(AnchorState.RULE_DEDUPLICATION)
-                .build();
-        frequencyDeduplicationService.deduplication(freParam);
+        // 去重
+        List<Integer> deduplicationList = DeduplicationType.getDeduplicationList();
+        for (Integer deduplicationType : deduplicationList) {
+            DeduplicationParam deduplicationParam = deduplicationHolder.selectBuilder(deduplicationType)
+                    .build(deduplicationConfig, taskInfo);
+            if (deduplicationParam != null) {
+                deduplicationHolder.selectService(deduplicationType)
+                        .deduplication(deduplicationParam);
+            }
+        }
     }
 }

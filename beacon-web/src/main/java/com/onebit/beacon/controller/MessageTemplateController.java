@@ -1,16 +1,11 @@
 package com.onebit.beacon.controller;
 
-import cn.hutool.core.date.DateUtil;
-import com.alibaba.fastjson.JSON;
 import com.onebit.beacon.dao.MessageTemplateDao;
 import com.onebit.beacon.domain.MessageTemplate;
-import com.onebit.beacon.enums.ChannelType;
-import com.onebit.beacon.enums.IdType;
-import com.onebit.beacon.enums.MessageType;
-import com.onebit.beacon.enums.TemplateType;
+import com.onebit.beacon.vo.BasicResultVO;
+import com.onebit.beacon.vo.MessageTemplateVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: Onebit
@@ -18,56 +13,31 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@RequestMapping("/messageTemplate")
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class MessageTemplateController {
 
     @Autowired
     private MessageTemplateDao messageTemplateDao;
 
     /**
-     * test insert
+     * 插入，如果存在则修改
      */
-    @GetMapping("/insert")
-    public String insert() {
-
-        MessageTemplate messageTemplate = MessageTemplate.builder()
-                .name("testSms")
-                .auditStatus(10)
-                .flowId("yyyy")
-                .messageStatus(10)
-                .idType(IdType.USER_ID.getCode())
-                .sendChannel(ChannelType.SMS.getCode())
-                .templateType(TemplateType.TECHNOLOGY.getCode())
-                .messageType(MessageType.AUTH_CODE.getCode())
-                .expectPushTime("0")
-                .messageContent("{\"content\":\"{$contentValue}\"}")
-                .sendAccount(10)
-                .creator("onebit")
-                .updater("onebit")
-                .team("onebit")
-                .proposer("onebit")
-                .auditor("onebit")
-                .isDeleted(0)
-                .created(Math.toIntExact(DateUtil.currentSeconds()))
-                .updated(Math.toIntExact(DateUtil.currentSeconds()))
-                .deduplicationTime(1)
-                .isNightShield(0)
-                .build();
-
+    @PostMapping("/save")
+    public BasicResultVO saveOrUpdate(@RequestBody MessageTemplate messageTemplate) {
         MessageTemplate info = messageTemplateDao.save(messageTemplate);
-
-        return JSON.toJSONString(info);
+        return BasicResultVO.success(info);
 
     }
 
     /**
-     * test query
+     * 查询模板
      */
     @GetMapping("/query")
-    public String query() {
+    public BasicResultVO query() {
         Iterable<MessageTemplate> all = messageTemplateDao.findAll();
-        for (MessageTemplate messageTemplate : all) {
-            return JSON.toJSONString(messageTemplate);
-        }
-        return null;
+        long count = messageTemplateDao.count();
+        MessageTemplateVo messageTemplateVo = MessageTemplateVo.builder().rows(all).count(count).build();
+        return BasicResultVO.success(messageTemplateVo);
     }
 }

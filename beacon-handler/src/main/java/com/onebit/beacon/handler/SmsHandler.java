@@ -24,7 +24,7 @@ import java.util.List;
  */
 @Component
 @Slf4j
-public class SmsHandler extends Handler {
+public class SmsHandler extends BaseHandler {
 
     public SmsHandler() {
         this.channelCode = ChannelType.SMS.getCode();

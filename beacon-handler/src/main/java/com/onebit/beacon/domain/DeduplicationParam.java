@@ -1,5 +1,6 @@
 package com.onebit.beacon.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.onebit.beacon.enums.AnchorState;
 import lombok.Builder;
 import lombok.Data;
@@ -20,15 +21,17 @@ public class DeduplicationParam {
      * 去重时间
      * 单位：秒
      */
+    @JSONField(name = "time")
     private Long deduplicationTime;
 
+    @JSONField(name = "num")
     /**
      * 需达到的次数去重
      */
     private Integer countNum;
 
     /**
-     * 标识属于哪种去重
+     * 标识属于哪种去重（数据埋点）
      */
     private AnchorState anchorState;
 }

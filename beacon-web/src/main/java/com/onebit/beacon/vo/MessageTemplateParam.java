@@ -5,24 +5,23 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Map;
-
 /**
  * @Author: Onebit
  * @Date: 2022/2/16
  */
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MessageTemplateVo {
+@Builder
+public class MessageTemplateParam {
     /**
-     * 消息模板列表
+     * 当前页码
      */
-    private Iterable<Map<String, Object>> rows;
+    private Integer page ;
 
     /**
-     * rows 的数量
+     * 当前页大小
      */
-    private Long count;
+    private Integer perPage;
+
 }

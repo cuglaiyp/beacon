@@ -52,12 +52,8 @@ public class TaskInfo {
      */
     private Integer msgType;
 
-    /**
-     * 发送文案内容
-     */
-    // private String content;
-    // 把每个模板内容定义成 json 不太好看，所以定义成一个个 ContentModel 类
 
+    // 把每个模板内容定义成 json 不太好看，所以定义成一个个 ContentModel 类
     /**
      * 发送文案模型
      * message_template 表存储的 content 是 JSON (所有内容都会塞进去)

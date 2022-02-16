@@ -14,7 +14,7 @@ import lombok.ToString;
 public enum MessageType {
     NOTICE(10,"通知类消息","notice"),
     MARKETING(20,"营销类消息","marketing"),
-    AUTH_CODE(30,"验证码消息","auth_code")
+    AUTH_CODE(30,"验证码消息","auth_code"),
     ;
     /**
      * 编码值

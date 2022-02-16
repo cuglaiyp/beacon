@@ -25,18 +25,19 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-
-        <!--引入springmvc-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <!--需要handler支持-->
         <dependency>
             <groupId>com.onebit</groupId>
             <artifactId>beacon-handler</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!--引入springmvc-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!--接入kafka-->
         <dependency>
             <groupId>org.springframework.kafka</groupId>

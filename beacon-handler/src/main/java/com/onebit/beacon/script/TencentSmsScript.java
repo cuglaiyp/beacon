@@ -67,6 +67,7 @@ public class TencentSmsScript implements SmsScript {
     @Value("${tencent.sms.account.sign_name}")
     private String SIGN_NAME;*/
 
+    @Override
     public List<SmsRecord> send(SmsParam smsParam) throws TencentCloudSDKException {
 
         // 读取配置

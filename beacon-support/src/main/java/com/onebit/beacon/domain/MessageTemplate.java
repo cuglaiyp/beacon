@@ -4,11 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * @Author: Onebit
@@ -19,7 +21,8 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class MessageTemplate {
+@Accessors(chain = true)
+public class MessageTemplate implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
@@ -39,10 +42,11 @@ public class MessageTemplate {
      */
     private String flowId;
 
+    // 不是很懂为什么需要消息状态
     /**
      * 消息状态
      */
-    private Integer messageStatus; // 不是很懂为什么需要消息状态
+    private Integer messageStatus;
 
     /**
      * 发送的Id类型

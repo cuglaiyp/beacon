@@ -18,6 +18,7 @@
         <module>beacon-service-api-impl</module>
         <module>beacon-support</module>
         <module>beacon-web</module>
+        <module>beacon-cron</module>
     </modules>
 
     <properties>
@@ -107,6 +108,13 @@
                 <groupId>de.siegmar</groupId>
                 <artifactId>logback-gelf</artifactId>
                 <version>3.0.0</version>
+            </dependency>
+
+            <!--xxl-job分布式定时任务-->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>2.3.0</version>
             </dependency>
 
         </dependencies>

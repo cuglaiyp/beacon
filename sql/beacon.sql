@@ -22,6 +22,8 @@ CREATE TABLE `message_template`
     `updated`            int(11)                                 NOT NULL DEFAULT '0' COMMENT '更新时间',
     `deduplication_time` tinyint(4)                              NOT NULL DEFAULT '0' COMMENT '去重时间 单位小时',
     `is_night_shield`    tinyint(4)                              NOT NULL DEFAULT '0' COMMENT '是否夜间屏蔽：0.夜间不屏蔽 1.夜间屏蔽',
+    `cron_task_id`       bigint(20) COMMENT '定时任务Id (xxl-job-admin返回)',
+    `cron_crowd_path`    varchar(500) COMMENT '定时发送人群文件路径',
     PRIMARY KEY (`id`),
     KEY `idx_channel` (`send_channel`)
 ) ENGINE = InnoDB
@@ -52,3 +54,4 @@ CREATE TABLE `sms_record`
   AUTO_INCREMENT = 1
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci COMMENT ='短信记录信息';
+

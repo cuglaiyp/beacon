@@ -32,6 +32,13 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.onebit</groupId>
+            <artifactId>beacon-cron</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!--引入springmvc-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

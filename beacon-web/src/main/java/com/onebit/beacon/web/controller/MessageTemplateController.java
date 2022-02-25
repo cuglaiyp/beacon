@@ -23,6 +23,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
@@ -45,10 +46,10 @@ public class MessageTemplateController {
     @Autowired
     private MessageTemplateService messageTemplateService;
 
-    @Autowired
+    @Resource
     private SendService sendService;
 
-    @Value("${beacon.business.upload.crown.path}")
+    @Value("${beacon.business.upload.crowd.path}")
     private String dataPath;
 
     /**

@@ -22,7 +22,7 @@ public class SendMqAction implements BusinessProcess {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
-    @Value("${beacon.topic.name}")
+    @Value("${beacon.business.topic.name}")
     private String topicName;
 
 

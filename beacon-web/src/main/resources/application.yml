@@ -70,7 +70,7 @@ xxl:
     job:
         accessToken:  # 执行器通讯TOKEN [选填]：非空时启用；
         admin:
-            addresses: http://127.0.0.1:8081 # 调度中心部署跟地址 [选填]：如调度中心集群部署存在多个地址则用逗号分隔。执行器将会使用该地址进行"执行器心跳注册"和"任务结果回调"；为空则关闭自动注册；
+            addresses: http://127.0.0.1:8081/xxl-job-admin # 调度中心部署跟地址 [选填]：如调度中心集群部署存在多个地址则用逗号分隔。执行器将会使用该地址进行"执行器心跳注册"和"任务结果回调"；为空则关闭自动注册；
             username: admin # 后台账号名
             password: 123456 # 后台密码
         executor:
@@ -90,5 +90,5 @@ beacon:
         grayLogIp: 192.168.80.102
         upload:
             crowd:
-                path:
+                path: E:\\IDEA_WorkSpace\\beacon-crowdfile\\
 

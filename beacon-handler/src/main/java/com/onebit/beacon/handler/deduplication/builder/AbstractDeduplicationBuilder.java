@@ -25,7 +25,7 @@ public abstract class AbstractDeduplicationBuilder implements Builder {
     }
 
     /**
-     * 从配置中心拉取去重配置
+     * 根据子类从配置中心拉取的去重配置构建去重参数
      *
      * @param key
      * @param duplicationConfig

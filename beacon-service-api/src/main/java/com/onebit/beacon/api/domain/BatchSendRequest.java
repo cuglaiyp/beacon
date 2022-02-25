@@ -1,5 +1,6 @@
 package com.onebit.beacon.api.domain;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @Date: 2022/1/13
  */
 @Data
+@Builder
 @Accessors(chain = true)
 public class BatchSendRequest {
     /**

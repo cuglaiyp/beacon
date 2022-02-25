@@ -7,12 +7,12 @@ import cn.hutool.http.HttpResponse;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Throwables;
+import com.onebit.beacon.common.enums.RespStatusEnum;
+import com.onebit.beacon.common.vo.BasicResultVO;
 import com.onebit.beacon.cron.xxl.constant.XxlJobConstant;
 import com.onebit.beacon.cron.xxl.entity.XxlJobGroup;
 import com.onebit.beacon.cron.xxl.entity.XxlJobInfo;
-import com.onebit.beacon.common.enums.RespStatusEnum;
 import com.onebit.beacon.cron.xxl.service.CronTaskService;
-import com.onebit.beacon.common.vo.BasicResultVO;
 import com.xxl.job.core.biz.model.ReturnT;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -173,9 +173,11 @@ public class CronTaskServiceImpl implements CronTaskService {
         HttpResponse response = null;
         try {
             response = HttpRequest.post(path).form(params).cookie(getCookie()).execute();
-            Integer id = JSON.parseObject(response.body()).getJSONArray("data").getJSONObject(0).getInteger("id");
-            if (response.isOk() && id != null) {
-                return BasicResultVO.success(id);
+            if (response.isOk()) {
+                Integer id = JSON.parseObject(response.body()).getJSONArray("data").getJSONObject(0).getInteger("id");
+                if (id != null) {
+                    return BasicResultVO.success(id);
+                }
             }
         } catch (Exception e) {
             log.error("CronTaskService#getGroupId fail,e:{},param:{},response:{}", Throwables.getStackTraceAsString(e)

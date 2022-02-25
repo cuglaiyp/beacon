@@ -6,12 +6,12 @@ import com.onebit.beacon.api.domain.SendRequest;
 import com.onebit.beacon.api.domain.SendResponse;
 import com.onebit.beacon.api.impl.domain.SendTaskModel;
 import com.onebit.beacon.api.service.SendService;
+import com.onebit.beacon.common.vo.BasicResultVO;
 import com.onebit.beacon.support.pipeline.ProcessContext;
 import com.onebit.beacon.support.pipeline.ProcessController;
-import com.onebit.beacon.common.vo.BasicResultVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 
 /**
@@ -28,7 +28,7 @@ public class SendServiceImpl implements SendService {
     /**
      * 首先得有流水线控制器
      */
-    @Autowired
+    @Resource
     private ProcessController processController;
 
     @Override

@@ -2,7 +2,6 @@ package com.onebit.beacon.cron.xxl.util;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
-import com.alibaba.fastjson.JSON;
 import com.onebit.beacon.common.constant.BeaconConstant;
 import com.onebit.beacon.common.enums.RespStatusEnum;
 import com.onebit.beacon.common.vo.BasicResultVO;
@@ -57,7 +56,7 @@ public class XxlJobUtil {
                 .misfireStrategy(MisfireStrategyEnum.DO_NOTHING.name())
                 .executorRouteStrategy(ExecutorRouteStrategyEnum.CONSISTENT_HASH.name())
                 .executorHandler(XxlJobConstant.JOB_HANDLER_NAME)
-                .executorParam(JSON.toJSONString(messageTemplate))
+                .executorParam(String.valueOf(messageTemplate.getId()))
                 .executorBlockStrategy(ExecutorBlockStrategyEnum.SERIAL_EXECUTION.name())
                 .executorTimeout(XxlJobConstant.TIME_OUT)
                 .executorFailRetryCount(XxlJobConstant.RETRY_COUNT)
